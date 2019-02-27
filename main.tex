@@ -76,10 +76,20 @@
 	
 	برای بدست آوردن بردار \lstinline[language=Octave]{ny} دو سیگنال زیر را در نظر بگیرید:
 	\begin{align*}
-	h[n] &= \delta[n - a] + \delta[n - b]\\
-	x[n] &= \delta[n - c] + \delta[n - d]
+	h[n] &= \delta[n - a] + \delta[n - b],\\
+	x[n] &= \delta[n - c] + \delta[n - d].
 	\end{align*}
 	با تحلیل دستی $y[n]=x[n]*x[n]$ را حساب کنید. سپس \lstinline[language=Octave]{ny} را بر حسب $a$، $b$، $c$ و $d$ تعیین کنید. حال می‌توانید تابع  \lstinline[language=Octave]{convIndices} را بنویسید. این تابع اندیس زمانی ورودی‌های کانولوشن را ورودی می‌گیرد و اندیس زمانی مناسبی برای خروجی کانولوشن می‌دهد. در این مثال ورودی های این تابع دو بردار به صورت \lr{\lstinline[language=Octave]{nh = a : b}} و \lr{\lstinline[language=Octave]{nx = c : d}} هستند.
+	\subsection{انجام دهید!}
+		سیگنال ورودی $x[n]$ و پاسخ ضربه ضربه $h[n]$ به صورت زیر تعریف شده‌اند:
+		\begin{align*}
+			x[n] &= \left(1/2\right)^{n-2}u[n-2],\\
+			h[n]‌&= u[n]
+		\end{align*}
+		حال اگر بخواهید $y[n]=x[n]*x[n]$ را با دستور \lstinline[language=Octave]{conv} حساب کنید، باید ملاحظاتی برای طول بی‌نهایت دو سیگنال $x[n]$ و $h[n]$ بکنید.
 		
-	
+		مقادیر $x[n]$ در بازه‌ی $0\le n\le24$ را در بردار \lstinline[language=Octave]{x} و مقادیر $h[n]$ در بازه‌ی $0\le n\le14$ را در بردار \lstinline[language=Octave]{h} ذخیره کنید. حال حاصل کانولوشن این دو سیگنال را در بردار \lstinline[language=Octave]{y} ذخیره کنید. این در حالی است که شما فقط قسمتی از دو سیگنال $x[n]$ و $h[n]$ را در نظر گرفته‌اید. پس فقط بخشی از سیگنال خروجی دارای مقادیر درست است.
+		
+		مقادیر $a$، $b$، $c$ و $d$ را به نحوی که \lr{\lstinline[language=Octave]{nh = a : b}} و \lr{\lstinline[language=Octave]{nx = c : d}} باشند، تعیین کنید و از جواب قسمت قبل برای بدست آوردن \lstinline[language=Octave]{ny} استفاده کنید. با دستور \lstinline[language=Octave]{stem} سیگنال $y[n]$ را رسم کنید و مشخص کنید چه بخشی از مقادیر آن با ارزش و چه بخشی بی‌ارزش است. (از برچسب‌های مناسب برای نمایش سیگنال خروجی استفاده کنید.)
+		
 \end{document}
