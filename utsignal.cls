@@ -53,7 +53,8 @@
     	showspaces=false,                
     	showstringspaces=false,
     	showtabs=false,                  
-    	tabsize=2
+    	tabsize=2,
+    	inputpath=matlab/
     }
     
     \lstset{style=matlabstyle}
