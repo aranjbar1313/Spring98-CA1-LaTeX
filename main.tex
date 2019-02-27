@@ -71,5 +71,15 @@
 		\lstinputlisting[language=Octave]{conv_example.m}
 	\end{latin}
 	
+	\subsection{انجام دهید!}
+	در این قسمت تابع \lstinline[language=Octave]{convIndices} را پیاده‌سازی می‌کنید.
+	
+	برای بدست آوردن بردار \lstinline[language=Octave]{ny} دو سیگنال زیر را در نظر بگیرید:
+	\begin{align*}
+	h[n] &= \delta[n - a] + \delta[n - b]\\
+	x[n] &= \delta[n - c] + \delta[n - d]
+	\end{align*}
+	با تحلیل دستی $y[n]=x[n]*x[n]$ را حساب کنید. سپس \lstinline[language=Octave]{ny} را بر حسب $a$، $b$، $c$ و $d$ تعیین کنید. حال می‌توانید تابع  \lstinline[language=Octave]{convIndices} را بنویسید. این تابع اندیس زمانی ورودی‌های کانولوشن را ورودی می‌گیرد و اندیس زمانی مناسبی برای خروجی کانولوشن می‌دهد. در این مثال ورودی های این تابع دو بردار به صورت \lr{\lstinline[language=Octave]{nh = a : b}} و \lr{\lstinline[language=Octave]{nx = c : d}} هستند.
+		
 	
 \end{document}
