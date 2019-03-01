@@ -42,13 +42,16 @@
     \definecolor{identifiercolor}{rgb}{.4,.6,.56}
     \definecolor{stringcolor}{gray}{0.5}
     \definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
-
+	\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+	\definecolor{greencomments}{rgb}{0,0.5,0}
+	\definecolor{redstrings}{rgb}{0.9,0,0}
+	
     \lstdefinestyle{matlabstyle}{
     	backgroundcolor=\color{backcolour},   
     	commentstyle=\color{codegreen},
-    	keywordstyle=\color{magenta},
+    	keywordstyle=\color{bluekeywords},
     	numberstyle=\tiny\color{codegray},
-    	stringstyle=\color{codepurple},
+    	stringstyle=\color{redstrings},
     	basicstyle=\footnotesize,
     	breakatwhitespace=false,         
     	breaklines=true,                 
