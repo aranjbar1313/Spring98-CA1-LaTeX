@@ -54,23 +54,7 @@
 	\subsection{رسم توابع و برخی ویژگی‌ها}
 	در متمتیکا می‌توان به راحتی توابع را به صورت پیوسته تعریف کرد، سپس به صورت پیوسته و گسسته رسم کرد. به قطعه کد زیر و خروجی آن دقت کنید.
 	\begin{latin}
-		\lstset{basicstyle={\footnotesize\def\fvm@Scale{.85}\fontfamily{fvm}\selectfont},
-			breaklines=true,
-			escapeinside={\%*}{*)},
-			keywordstyle={\bfseries\color{inactivecolor}},
-			stringstyle={\bfseries\color{stringcolor}},
-			identifierstyle={\bfseries\color{identifiercolor}},
-			language=Mathematica,
-			otherkeywords={DiscretizeRegion},
-			showstringspaces=false}
-		\renewcommand{\lstlistingname}{Listing}
-		\begin{lstlisting}[extendedchars=true,language=Mathematica]
-f[x_] = Sin[3x] Exp[-0.1x];
-plot1 = Plot[f[x], {x, -10, 10}, 
-	PlotLabels -> Placed[Automatic, Above], Frame -> True, 
-	FrameLabel -> {x, "Continuous Plot"}]
-plot2 = DiscretePlot[f[x], {x, -10, 10}, Frame -> True, 
-	FrameLabel -> {x, "Discrete Plot"}]\end{lstlisting}
+		\lstinputlisting[language=Mathematica]{plot1.nb}
 	\end{latin}
 	
 	\begin{figure}[h]
@@ -98,14 +82,14 @@ plot2 = DiscretePlot[f[x], {x, -10, 10}, Frame -> True,
 	\end{latin}
 
 	\subsection{انجام دهید!}
-	دو تابع انرژی و توان را طوری بنوسید که یک سیگنال را به عنوان ورودی بگیرد و انرژی یا توان آن را گزارش کند. انرژی و توان سیگنال‌های فوق را در قالب \lstinlint{Table} گزارش کنید. مقادیر بدست آمده را با تحلیل دستی خود مقایسه کنید.
+	دو تابع انرژی و توان را طوری بنوسید که یک سیگنال را به عنوان ورودی بگیرد و انرژی یا توان آن را گزارش کند. انرژی و توان سیگنال‌های فوق را در قالب \lstinline{Table} گزارش کنید. مقادیر بدست آمده را با تحلیل دستی خود مقایسه کنید.
 	\subsection{انجام دهید!}
-	مقدار \lstinline{DC} توابع قسمت ۲.۲ را نیز محاسبه کرده و در قالب \lstinlint{Table}  ارائه دهید. مقادیر بدست آمده را با تحلیل دستی خود مقایسه کنید.
+	مقدار \lstinline{DC} توابع قسمت ۲.۲ را نیز محاسبه کرده و در قالب \lstinline{Table}  ارائه دهید. مقادیر بدست آمده را با تحلیل دستی خود مقایسه کنید.
 	\subsection{انجام دهید!}
 	می‌خواهیم برای پردازش‌های بعدی از سیگنال زیر نمونه‌برداری کنیم. برای این که ابتدا سیگنال را تعریف کرده سپس آن را در بازه‌ی $-5 \le t \le 5$ رسم کنید.
 	$$x_6(t) = sin(t) + 0.5 sin(3t)$$
 	نمونه‌برداری به این صورت است که تابع ضربه‌ای را از چپ به راست حرکت داده و در سیگنال مورد نظر ضرب می‌کنیم.
-	$$x_s(t) = x(t)\delta_T_s(t) = \sum_{n} x(nT_s)\delta(t-nT_s)$$
+	$$x_s(t) = x(t)\delta_{T_s}(t) = \sum_{n} x(nT_s)\delta(t-nT_s)$$
 	برای این کار، از تابع ضربه‌ای که برای رسم قسمت ۲.۲ از آن استفاده کردید کمک بگیرید. همچنین کافی است این ضرب را در بازه‌ی $-5 \le t \le 5$ و با فاصله‌های $0.1$ انجام داده، نتایج را در یک \lstinline{Table} ذخیره کنید، سپس شکل حاصل را رسم کنید. شکل حاصل باید مشابه شکل زیر باشد.
 	\begin{figure}[h]
 		\centering

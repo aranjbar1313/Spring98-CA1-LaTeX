@@ -1,0 +1,6 @@
+f[x_] = Sin[3x] Exp[-0.1x];
+plot1 = Plot[f[x], {x, -10, 10}, 
+	PlotLabels -> Placed[Automatic, Above], Frame -> True, 
+	FrameLabel -> {x, "Continuous Plot"}]
+plot2 = DiscretePlot[f[x], {x, -10, 10}, Frame -> True, 
+	FrameLabel -> {x, "Discrete Plot"}]

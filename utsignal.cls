@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{utap}
+\ProvidesClass{utsignal}
 
 \LoadClass[a4paper, dvipsnames]{article}
 \RequirePackage{kvoptions}
@@ -60,7 +60,7 @@
     	showstringspaces=false,
     	showtabs=false,                  
     	tabsize=2,
-    	inputpath=matlab/
+    	inputpath=codes/
     }
     
     \lstset{style=matlabstyle}
