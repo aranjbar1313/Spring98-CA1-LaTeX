@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{utsignal}
+\ProvidesClass{utap}
 
 \LoadClass[a4paper, dvipsnames]{article}
 \RequirePackage{kvoptions}
@@ -21,6 +21,7 @@
 % \RequirePackage{xepersian}
 \usepackage[ugly]{nicefrac}
 
+
 \DeclareDefaultOption{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessKeyvalOptions*
 
@@ -37,11 +38,11 @@
     \definecolor{codegray}{rgb}{0.5,0.5,0.5}
     \definecolor{codepurple}{rgb}{0.58,0,0.82}
     \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-    
+
     \definecolor{identifiercolor}{rgb}{.4,.6,.56}
     \definecolor{stringcolor}{gray}{0.5}
     \definecolor{inactivecolor}{rgb}{0.15,0.15,0.5}
-        
+
     \lstdefinestyle{matlabstyle}{
     	backgroundcolor=\color{backcolour},   
     	commentstyle=\color{codegreen},
@@ -63,7 +64,6 @@
     }
     
     \lstset{style=matlabstyle}
-    
     
     \renewcommand{\maketitle}[0]{
         \clearpage
