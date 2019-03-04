@@ -4,3 +4,4 @@ plot1 = Plot[f[x], {x, -10, 10},
 	FrameLabel -> {x, "Continuous Plot"}]
 plot2 = DiscretePlot[f[x], {x, -10, 10}, Frame -> True, 
 	FrameLabel -> {x, "Discrete Plot"}]
+GraphicsGrid[{plot1, plot2}, ImageSize -> Medium]
