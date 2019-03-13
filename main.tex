@@ -133,6 +133,7 @@
 
 	\subsection{آموزش \lstinline[language=Octave]{conv}}
 	اگر فرض کنیم سیگنال $x[n]$ فقط در بازه‌ای به طول $N_x$ و سیگنال $h[n]$ فقط در بازه‌ای به طول $N_h$ مقدار غیر صفر داشته باشند، آنگاه سیگنال $y[n]$ فقط در بازه‌ای بطول $N_x+N_h-1$ غیر صفر خواهد بود. بدین معنی که اگر  \lstinline[language=Octave]{x} برداری $N_x$ بعدی شامل مقادیر سیگنال  $x[n]$ و \lstinline[language=Octave]{h} برداری $N_h$ بعدی شامل مقادیر سیگنال $h[n]$ باشد، دستور 
+	
 	\begin{latin}
 		\lstinputlisting[language=Octave]{convhx.m}
 	\end{latin}
@@ -150,8 +151,18 @@
 	ابتدا حاصل عبارت $y[n]=x[n]*x[n]$ را با تحلیل دستی حساب کنید.
 	
 	به کمک کد زیر می‌توانید کانولوشن را حساب کرده و آن را رسم کنید. دقت کنید که باید تابع \lstinline[language=Octave]{convIndices} را پیاده سازی کنید.
+	
+	\begin{itemize}
+		\item کد متلب
+	\end{itemize}
 	\begin{latin}
 		\lstinputlisting[language=Octave]{conv_example.m}
+	\end{latin}
+	\begin{itemize}
+		\item کد پایتون
+	\end{itemize}
+	\begin{latin}
+		\lstinputlisting[language=Python]{4.1.py}
 	\end{latin}
 	
 	\subsection{انجام دهید!}
@@ -182,7 +193,7 @@
 	$$
 	خروجی این سیستم را یکبار با تابع کانولوشن متلب و یکبار با تابع خوتان برای ورودی زیر حساب کنید و صحت تابع خود را بررسی کنید.
 	$$
-	x[n]=u[n]-n[n-2]
+	x[n]=u[n]-u[n-2]
 	$$
 	با دستور \lstinline[language=Octave]{tic} و \lstinline[language=Octave]{toc} مدت زمان انجام کانولوشن خودتان و کانولوشن متلب را بدست آورید و مقایسه کنید. علت اختلاف را شرح دهید.
 	\subsection{انجام دهید (امتیازی)!}
