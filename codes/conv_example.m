@@ -1,7 +1,7 @@
 clear; clc
 nx = 0 : 5;
 x = ones(size(nx));
-ny = convIndices(nx, nx);   % you need to implement the convIndices function. 
+ny = convIndices(nx, nx);   % You need to implement the convIndices function. 
                             % In this example it will output a row vector with elements [0 .. 10]
 y = conv(x, x);
 stem(ny, y, 'lineWidth', 2)
